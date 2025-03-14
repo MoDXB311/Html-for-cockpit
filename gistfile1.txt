@@ -1,0 +1,1197 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Worksheet ss:Name="Website Health Dashboard">
+  <Table>
+   <!-- Header and Title -->
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">WORDPRESS &amp; ELEMENTOR WEBSITE HEALTH COCKPIT</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Last Updated: =TODAY()</Data></Cell>
+   </Row>
+   <Row></Row>
+   
+   <!-- Performance Section -->
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">PERFORMANCE METRICS</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">SCORE</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">STATUS</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">LAST CHECK</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">TREND</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">NOTES</Data></Cell>
+   </Row>
+   
+   <!-- Page Speed -->
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Page Load Time (seconds)</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]&lt;2,&quot;Good&quot;,IF(RC[-1]&lt;4,&quot;Warning&quot;,&quot;Critical&quot;))"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Target: &lt;2s</Data></Cell>
+   </Row>
+   
+   <!-- Caching -->
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Page Caching</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=1,&quot;Enabled&quot;,&quot;Disabled&quot;)"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">N/A</Data></Cell>
+    <Cell><Data ss:Type="String">1=Enabled, 0=Disabled</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Browser Caching</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=1,&quot;Enabled&quot;,&quot;Disabled&quot;)"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">N/A</Data></Cell>
+    <Cell><Data ss:Type="String">1=Enabled, 0=Disabled</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Object Caching</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=1,&quot;Enabled&quot;,&quot;Disabled&quot;)"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">N/A</Data></Cell>
+    <Cell><Data ss:Type="String">1=Enabled, 0=Disabled</Data></Cell>
+   </Row>
+   
+   <!-- Database Section -->
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Database Optimization Status</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=1,&quot;Optimized&quot;,&quot;Needs Optimization&quot;)"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">N/A</Data></Cell>
+    <Cell><Data ss:Type="String">1=Optimized, 0=Needs Optimization</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Database Size (MB)</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]&lt;100,&quot;Good&quot;,IF(RC[-1]&lt;500,&quot;Warning&quot;,&quot;Critical&quot;))"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Post Revisions Count</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]&lt;100,&quot;Good&quot;,IF(RC[-1]&lt;500,&quot;Warning&quot;,&quot;Critical&quot;))"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <!-- HTTP Requests -->
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Total HTTP Requests</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]&lt;50,&quot;Good&quot;,IF(RC[-1]&lt;100,&quot;Warning&quot;,&quot;Critical&quot;))"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Target: &lt;50</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">CSS Files Count</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]&lt;10,&quot;Good&quot;,IF(RC[-1]&lt;20,&quot;Warning&quot;,&quot;Critical&quot;))"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">JS Files Count</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]&lt;15,&quot;Good&quot;,IF(RC[-1]&lt;30,&quot;Warning&quot;,&quot;Critical&quot;))"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Images Lazy Loading</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=1,&quot;Enabled&quot;,&quot;Disabled&quot;)"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">N/A</Data></Cell>
+    <Cell><Data ss:Type="String">1=Enabled, 0=Disabled</Data></Cell>
+   </Row>
+   
+   <Row></Row>
+   
+   <!-- Elementor Section -->
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">ELEMENTOR METRICS</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">SCORE</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">STATUS</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">LAST CHECK</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">TREND</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">NOTES</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Unused Elementor Widgets</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]&lt;5,&quot;Good&quot;,IF(RC[-1]&lt;15,&quot;Warning&quot;,&quot;Critical&quot;))"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Count of inactive widgets still loaded</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Elementor CSS File Size (KB)</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]&lt;200,&quot;Good&quot;,IF(RC[-1]&lt;500,&quot;Warning&quot;,&quot;Critical&quot;))"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Target: &lt;200KB</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">CSS Regeneration Needed</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=0,&quot;No&quot;,&quot;Yes&quot;)"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">N/A</Data></Cell>
+    <Cell><Data ss:Type="String">0=No, 1=Yes</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Elementor Debug Mode</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=0,&quot;Disabled&quot;,&quot;Enabled&quot;)"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">N/A</Data></Cell>
+    <Cell><Data ss:Type="String">Should be disabled on production</Data></Cell>
+   </Row>
+   
+   <Row></Row>
+   
+   <!-- Security Section -->
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">SECURITY METRICS</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">SCORE</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">STATUS</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">LAST CHECK</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">TREND</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">NOTES</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Security Headers Implemented</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=1,&quot;Yes&quot;,&quot;No&quot;)"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">N/A</Data></Cell>
+    <Cell><Data ss:Type="String">1=Yes, 0=No</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">SSL Status</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=1,&quot;Valid&quot;,&quot;Invalid/Missing&quot;)"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">N/A</Data></Cell>
+    <Cell><Data ss:Type="String">1=Valid, 0=Invalid/Missing</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">File Permissions Correct</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=1,&quot;Yes&quot;,&quot;No&quot;)"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">N/A</Data></Cell>
+    <Cell><Data ss:Type="String">1=Yes, 0=No</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Login Attempts Monitoring</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=1,&quot;Enabled&quot;,&quot;Disabled&quot;)"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">N/A</Data></Cell>
+    <Cell><Data ss:Type="String">1=Enabled, 0=Disabled</Data></Cell>
+   </Row>
+   
+   <Row></Row>
+   
+   <!-- SEO & Metadata Section -->
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">SEO & METADATA</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">SCORE</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">STATUS</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">LAST CHECK</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">TREND</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">NOTES</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Meta Descriptions Missing</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=0,&quot;Good&quot;,IF(RC[-1]&lt;5,&quot;Warning&quot;,&quot;Critical&quot;))"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Count of pages missing descriptions</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Broken Links Count</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=0,&quot;Good&quot;,IF(RC[-1]&lt;5,&quot;Warning&quot;,&quot;Critical&quot;))"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Target: 0</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Schema Markup Implemented</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=1,&quot;Yes&quot;,&quot;No&quot;)"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">N/A</Data></Cell>
+    <Cell><Data ss:Type="String">1=Yes, 0=No</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">XML Sitemap Status</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=IF(RC[-1]=1,&quot;Valid&quot;,&quot;Invalid/Missing&quot;)"></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">N/A</Data></Cell>
+    <Cell><Data ss:Type="String">1=Valid, 0=Invalid/Missing</Data></Cell>
+   </Row>
+   
+   <Row></Row>
+   
+   <!-- Health Score Summary -->
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">OVERALL HEALTH SCORES</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">SCORE</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">STATUS</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Performance Health Score</Data></Cell>
+    <Cell ss:Formula="=ROUND(AVERAGE(R5C2:R15C2)/10*100,0)"></Cell>
+    <Cell ss:Formula="=IF(RC[-1]&gt;80,&quot;Good&quot;,IF(RC[-1]&gt;50,&quot;Warning&quot;,&quot;Critical&quot;))"></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Elementor Health Score</Data></Cell>
+    <Cell ss:Formula="=ROUND(AVERAGE(R18C2:R21C2)/10*100,0)"></Cell>
+    <Cell ss:Formula="=IF(RC[-1]&gt;80,&quot;Good&quot;,IF(RC[-1]&gt;50,&quot;Warning&quot;,&quot;Critical&quot;))"></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Security Health Score</Data></Cell>
+    <Cell ss:Formula="=ROUND(AVERAGE(R24C2:R27C2)/1*100,0)"></Cell>
+    <Cell ss:Formula="=IF(RC[-1]&gt;80,&quot;Good&quot;,IF(RC[-1]&gt;50,&quot;Warning&quot;,&quot;Critical&quot;))"></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">SEO Health Score</Data></Cell>
+    <Cell ss:Formula="=ROUND(AVERAGE(R30C2:R33C2)/1*100,0)"></Cell>
+    <Cell ss:Formula="=IF(RC[-1]&gt;80,&quot;Good&quot;,IF(RC[-1]&gt;50,&quot;Warning&quot;,&quot;Critical&quot;))"></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s25"><Data ss:Type="String">TOTAL WEBSITE HEALTH SCORE</Data></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=ROUND(AVERAGE(R36C2:R39C2),0)"></Cell>
+    <Cell ss:StyleID="s25" ss:Formula="=IF(RC[-1]&gt;80,&quot;GOOD&quot;,IF(RC[-1]&gt;50,&quot;WARNING&quot;,&quot;CRITICAL&quot;))"></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ 
+ <Worksheet ss:Name="Check History">
+  <Table>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">WEBSITE HEALTH CHECK HISTORY</Data></Cell>
+   </Row>
+   <Row></Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">DATE</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">TOTAL SCORE</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">PERFORMANCE</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">ELEMENTOR</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">SECURITY</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">SEO</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">NOTES</Data></Cell>
+   </Row>
+   <!-- Sample entries -->
+   <Row>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ 
+ <Worksheet ss:Name="Action Items">
+  <Table>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">RECOMMENDED ACTIONS</Data></Cell>
+   </Row>
+   <Row></Row>
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">PRIORITY</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">CATEGORY</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">ISSUE</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">RECOMMENDED ACTION</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">STATUS</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">DEADLINE</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">NOTES</Data></Cell>
+   </Row>
+   <!-- Sample high priority items -->
+   <Row>
+    <Cell><Data ss:Type="String">High</Data></Cell>
+    <Cell><Data ss:Type="String">Performance</Data></Cell>
+    <Cell><Data ss:Type="String">No page caching enabled</Data></Cell>
+    <Cell><Data ss:Type="String">Install and configure WP Rocket or W3 Total Cache</Data></Cell>
+    <Cell><Data ss:Type="String">Pending</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">See code snippet in functions.php tab</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">High</Data></Cell>
+    <Cell><Data ss:Type="String">Security</Data></Cell>
+    <Cell><Data ss:Type="String">Missing security headers</Data></Cell>
+    <Cell><Data ss:Type="String">Add security headers to .htaccess file</Data></Cell>
+    <Cell><Data ss:Type="String">Pending</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">See .htaccess tab for code</Data></Cell>
+   </Row>
+   <!-- Sample medium priority items -->
+   <Row>
+    <Cell><Data ss:Type="String">Medium</Data></Cell>
+    <Cell><Data ss:Type="String">Elementor</Data></Cell>
+    <Cell><Data ss:Type="String">Unused widgets loading</Data></Cell>
+    <Cell><Data ss:Type="String">Disable unused Elementor widgets</Data></Cell>
+    <Cell><Data ss:Type="String">Pending</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">See functions.php tab</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Medium</Data></Cell>
+    <Cell><Data ss:Type="String">Database</Data></Cell>
+    <Cell><Data ss:Type="String">Database optimization</Data></Cell>
+    <Cell><Data ss:Type="String">Schedule regular database cleanup</Data></Cell>
+    <Cell><Data ss:Type="String">Pending</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">See functions.php tab</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ 
+ <Worksheet ss:Name="Code Snippets - functions.php">
+  <Table>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">FUNCTIONS.PHP CODE SNIPPETS</Data></Cell>
+   </Row>
+   <Row></Row>
+   
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">CODE SNIPPET</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Database Optimization</Data></Cell>
+    <Cell><Data ss:Type="String">/**
+ * Schedule weekly database optimization
+ */
+function optimize_database_weekly() {
+    global $wpdb;
+    
+    // Optimize posts table
+    $wpdb->query("OPTIMIZE TABLE $wpdb->posts");
+    
+    // Optimize postmeta table
+    $wpdb->query("OPTIMIZE TABLE $wpdb->postmeta");
+    
+    // Optimize options table
+    $wpdb->query("OPTIMIZE TABLE $wpdb->options");
+    
+    // Optimize comments table
+    $wpdb->query("OPTIMIZE TABLE $wpdb->comments");
+    
+    // Add more tables as needed
+}
+
+// Schedule weekly optimization
+if (!wp_next_scheduled('database_optimization_hook')) {
+    wp_schedule_event(time(), 'weekly', 'database_optimization_hook');
+}
+add_action('database_optimization_hook', 'optimize_database_weekly');</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Clean Post Revisions</Data></Cell>
+    <Cell><Data ss:Type="String">/**
+ * Clean up post revisions monthly
+ */
+function clean_post_revisions() {
+    global $wpdb;
+    
+    // Delete all post revisions
+    $wpdb->query("DELETE FROM $wpdb->posts WHERE post_type = 'revision'");
+    
+    // Delete orphaned postmeta
+    $wpdb->query("DELETE pm FROM $wpdb->postmeta pm LEFT JOIN $wpdb->posts p ON pm.post_id = p.ID WHERE p.ID IS NULL");
+}
+
+// Schedule monthly cleanup
+if (!wp_next_scheduled('revision_cleanup_hook')) {
+    wp_schedule_event(time(), 'monthly', 'revision_cleanup_hook');
+}
+add_action('revision_cleanup_hook', 'clean_post_revisions');</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Disable Unused Elementor Widgets</Data></Cell>
+    <Cell><Data ss:Type="String">/**
+ * Disable unused Elementor widgets to improve performance
+ */
+function disable_unused_elementor_widgets($widgets_manager) {
+    // List of widgets to disable - customize based on your needs
+    $widgets_to_disable = [
+        'social-icons',
+        'image-carousel',
+        'flip-box',
+        'price-table',
+        'animated-headline',
+        'price-list',
+        'countdown',
+        // Add more widgets as needed
+    ];
+    
+    foreach ($widgets_to_disable as $widget) {
+        $widgets_manager->unregister_widget_type('elementor-widget-' . $widget);
+    }
+}
+add_action('elementor/widgets/widgets_registered', 'disable_unused_elementor_widgets');</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Optimize Elementor CSS</Data></Cell>
+    <Cell><Data ss:Type="String">/**
+ * Force Elementor to regenerate CSS files
+ */
+function regenerate_elementor_css() {
+    // Only run once a week
+    if (get_transient('elementor_css_regenerated')) {
+        return;
+    }
+    
+    // Regenerate the CSS files
+    if (class_exists('\Elementor\Plugin')) {
+        \Elementor\Plugin::instance()->files_manager->clear_cache();
+    }
+    
+    // Set transient to prevent running too often
+    set_transient('elementor_css_regenerated', true, WEEK_IN_SECONDS);
+}
+add_action('admin_init', 'regenerate_elementor_css');</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Remove Elementor Font Awesome</Data></Cell>
+    <Cell><Data ss:Type="String">/**
+ * Remove Font Awesome if you're not using it
+ */
+function remove_elementor_font_awesome() {
+    wp_deregister_style('font-awesome');
+    wp_dequeue_style('font-awesome');
+}
+add_action('wp_enqueue_scripts', 'remove_elementor_font_awesome', 20);</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ 
+ <Worksheet ss:Name=".htaccess Optimizations">
+  <Table>
+   <Row>
+    <Cell ss
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Worksheet ss:Name=".htaccess Optimizations">
+  <Table>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">.HTACCESS OPTIMIZATIONS</Data></Cell>
+   </Row>
+   <Row></Row>
+   
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">CODE SNIPPET</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Browser Caching Rules</Data></Cell>
+    <Cell><Data ss:Type="String"># Browser Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  
+  # Fonts
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  
+  # Others
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType application/x-shockwave-flash "access plus 1 month"
+</IfModule></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">GZIP Compression</Data></Cell>
+    <Cell><Data ss:Type="String"># Enable GZIP Compression
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, Text, XML and fonts
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+</IfModule></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Security Headers</Data></Cell>
+    <Cell><Data ss:Type="String"># Security Headers
+<IfModule mod_headers.c>
+  # X-XSS-Protection
+  Header set X-XSS-Protection "1; mode=block"
+  
+  # X-Frame-Options
+  Header set X-Frame-Options "SAMEORIGIN"
+  
+  # X-Content-Type-Options
+  Header set X-Content-Type-Options "nosniff"
+  
+  # Referrer-Policy
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  
+  # Content-Security-Policy - Customize based on your needs
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com *.gstatic.com *.google-analytics.com; img-src 'self' data: *.googleapis.com *.gstatic.com *.google-analytics.com; style-src 'self' 'unsafe-inline' *.googleapis.com; font-src 'self' data: *.gstatic.com *.googleapis.com; connect-src 'self' *.google-analytics.com; frame-src 'self';"
+  
+  # Permissions-Policy
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Protect WordPress Files</Data></Cell>
+    <Cell><Data ss:Type="String"># Protect WordPress Files
+<Files wp-config.php>
+  Order Deny,Allow
+  Deny from all
+</Files>
+
+<Files .htaccess>
+  Order Deny,Allow
+  Deny from all
+</Files>
+
+<Files readme.html>
+  Order Deny,Allow
+  Deny from all
+</Files>
+
+<Files license.txt>
+  Order Deny,Allow
+  Deny from all
+</Files>
+
+# Disable directory browsing
+Options -Indexes
+
+# Block WordPress xmlrpc.php requests
+<Files xmlrpc.php>
+  Order Deny,Allow
+  Deny from all
+</Files></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Stop Hotlinking</Data></Cell>
+    <Cell><Data ss:Type="String"># Prevent Image Hotlinking
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_REFERER} !^$
+  RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?yourdomain.com [NC]
+  RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?google.com [NC]
+  RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?bing.com [NC]
+  RewriteRule \.(jpg|jpeg|png|gif|svg)$ - [NC,F,L]
+</IfModule></Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ 
+ <Worksheet ss:Name="Performance Checklist">
+  <Table>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">PERFORMANCE OPTIMIZATION CHECKLIST</Data></Cell>
+   </Row>
+   <Row></Row>
+   
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">CATEGORY</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">TASK</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">COMPLETED</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">DATE</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">NOTES</Data></Cell>
+   </Row>
+   
+   <!-- Caching Section -->
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Caching</Data></Cell>
+    <Cell><Data ss:Type="String">Install page caching plugin (WP Rocket/W3 Total Cache)</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Caching</Data></Cell>
+    <Cell><Data ss:Type="String">Configure browser caching in .htaccess</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Caching</Data></Cell>
+    <Cell><Data ss:Type="String">Enable object caching if supported by hosting</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <!-- Database Section -->
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Database</Data></Cell>
+    <Cell><Data ss:Type="String">Schedule automatic database optimization</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Database</Data></Cell>
+    <Cell><Data ss:Type="String">Clean post revisions and transients</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Database</Data></Cell>
+    <Cell><Data ss:Type="String">Limit post revisions in wp-config.php</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">define('WP_POST_REVISIONS', 3);</Data></Cell>
+   </Row>
+   
+   <!-- Assets Optimization -->
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Assets</Data></Cell>
+    <Cell><Data ss:Type="String">Enable GZIP compression</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Assets</Data></Cell>
+    <Cell><Data ss:Type="String">Minify CSS and JavaScript files</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Assets</Data></Cell>
+    <Cell><Data ss:Type="String">Enable lazy loading for images</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Assets</Data></Cell>
+    <Cell><Data ss:Type="String">Optimize and compress images</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <!-- Elementor Specific -->
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Elementor</Data></Cell>
+    <Cell><Data ss:Type="String">Disable unused Elementor widgets</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Elementor</Data></Cell>
+    <Cell><Data ss:Type="String">Regenerate Elementor CSS files</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Elementor</Data></Cell>
+    <Cell><Data ss:Type="String">Disable Elementor Google Fonts</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">If not using them</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Elementor</Data></Cell>
+    <Cell><Data ss:Type="String">Disable Elementor icons library if unused</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <!-- Security Measures -->
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Security</Data></Cell>
+    <Cell><Data ss:Type="String">Implement security headers</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Security</Data></Cell>
+    <Cell><Data ss:Type="String">Secure file permissions</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Security</Data></Cell>
+    <Cell><Data ss:Type="String">Block access to sensitive files</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">Security</Data></Cell>
+    <Cell><Data ss:Type="String">Configure limit login attempts</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <!-- SEO Enhancements -->
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">SEO</Data></Cell>
+    <Cell><Data ss:Type="String">Set up XML sitemap</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">SEO</Data></Cell>
+    <Cell><Data ss:Type="String">Implement schema markup</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">SEO</Data></Cell>
+    <Cell><Data ss:Type="String">Check and fix broken links</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">SEO</Data></Cell>
+    <Cell><Data ss:Type="String">Complete all meta descriptions</Data></Cell>
+    <Cell><Data ss:Type="Boolean">0</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ 
+ <Worksheet ss:Name="Site Health Monitoring">
+  <Table>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">AUTOMATED HEALTH MONITORING SETUP</Data></Cell>
+   </Row>
+   <Row></Row>
+   
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">MONITORING TASK</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">TOOL/METHOD</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">FREQUENCY</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">STATUS</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">NOTES</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Uptime Monitoring</Data></Cell>
+    <Cell><Data ss:Type="String">UptimeRobot/Pingdom</Data></Cell>
+    <Cell><Data ss:Type="String">Every 5 minutes</Data></Cell>
+    <Cell><Data ss:Type="String">Not configured</Data></Cell>
+    <Cell><Data ss:Type="String">Free plan available on UptimeRobot</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Performance Testing</Data></Cell>
+    <Cell><Data ss:Type="String">GTmetrix</Data></Cell>
+    <Cell><Data ss:Type="String">Weekly</Data></Cell>
+    <Cell><Data ss:Type="String">Not configured</Data></Cell>
+    <Cell><Data ss:Type="String">Monitor Core Web Vitals</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Security Scanning</Data></Cell>
+    <Cell><Data ss:Type="String">Wordfence</Data></Cell>
+    <Cell><Data ss:Type="String">Daily</Data></Cell>
+    <Cell><Data ss:Type="String">Not configured</Data></Cell>
+    <Cell><Data ss:Type="String">Set up email alerts</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Broken Link Checking</Data></Cell>
+    <Cell><Data ss:Type="String">Broken Link Checker Plugin</Data></Cell>
+    <Cell><Data ss:Type="String">Weekly</Data></Cell>
+    <Cell><Data ss:Type="String">Not configured</Data></Cell>
+    <Cell><Data ss:Type="String">Consider external service for larger sites</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Database Health</Data></Cell>
+    <Cell><Data ss:Type="String">WP-Optimize</Data></Cell>
+    <Cell><Data ss:Type="String">Weekly</Data></Cell>
+    <Cell><Data ss:Type="String">Not configured</Data></Cell>
+    <Cell><Data ss:Type="String">Schedule automatic cleanup</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Error Log Monitoring</Data></Cell>
+    <Cell><Data ss:Type="String">Custom PHP script</Data></Cell>
+    <Cell><Data ss:Type="String">Daily</Data></Cell>
+    <Cell><Data ss:Type="String">Not configured</Data></Cell>
+    <Cell><Data ss:Type="String">See script in PHP code tab</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">SSL Certificate Monitoring</Data></Cell>
+    <Cell><Data ss:Type="String">SSL Monitor Service</Data></Cell>
+    <Cell><Data ss:Type="String">Daily</Data></Cell>
+    <Cell><Data ss:Type="String">Not configured</Data></Cell>
+    <Cell><Data ss:Type="String">Check expiration date</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Plugin Update Monitoring</Data></Cell>
+    <Cell><Data ss:Type="String">MainWP / ManageWP</Data></Cell>
+    <Cell><Data ss:Type="String">Daily</Data></Cell>
+    <Cell><Data ss:Type="String">Not configured</Data></Cell>
+    <Cell><Data ss:Type="String">Set up email notifications</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Core Web Vitals</Data></Cell>
+    <Cell><Data ss:Type="String">Google Search Console</Data></Cell>
+    <Cell><Data ss:Type="String">Monthly</Data></Cell>
+    <Cell><Data ss:Type="String">Not configured</Data></Cell>
+    <Cell><Data ss:Type="String">Connect site to Search Console</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Mobile Usability</Data></Cell>
+    <Cell><Data ss:Type="String">Google Mobile-Friendly Test</Data></Cell>
+    <Cell><Data ss:Type="String">Monthly</Data></Cell>
+    <Cell><Data ss:Type="String">Not configured</Data></Cell>
+    <Cell><Data ss:Type="String">Check after major site updates</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ 
+ <Worksheet ss:Name="PHP & JS Monitoring Scripts">
+  <Table>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">MONITORING SCRIPTS</Data></Cell>
+   </Row>
+   <Row></Row>
+   
+   <Row>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">CODE SNIPPET</Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Error Log Monitor Script</Data></Cell>
+    <Cell><Data ss:Type="String"><?php
+/**
+ * WordPress Error Log Monitor
+ * 
+ * Save as error-monitor.php in your site root
+ * Set up a cron job to run this daily
+ */
+
+// Configuration
+$to_email = 'your-email@example.com';
+$log_file = '/path/to/your/error.log'; // Update with actual path
+$site_name = 'Your WordPress Site';
+$alert_threshold = 10; // Min errors to trigger alert
+
+// Check if log file exists
+if (!file_exists($log_file)) {
+    exit("Error log file not found: $log_file");
+}
+
+// Get today's date
+$today = date('Y-m-d');
+
+// Parse error log file for today's errors
+$errors = [];
+$error_count = 0;
+$handle = fopen($log_file, 'r');
+
+if ($handle) {
+    while (($line = fgets($handle)) !== false) {
+        // Check if line contains today's date
+        if (strpos($line, $today) !== false) {
+            $errors[] = $line;
+            $error_count++;
+        }
+    }
+    fclose($handle);
+}
+
+// Send email if error count exceeds threshold
+if ($error_count >= $alert_threshold) {
+    $subject = "ALERT: $site_name - $error_count PHP Errors Detected";
+    
+    $message = "WordPress Error Log Alert\n\n";
+    $message .= "Site: $site_name\n";
+    $message .= "Date: $today\n";
+    $message .= "Error Count: $error_count\n\n";
+    $message .= "Recent Errors:\n";
+    $message .= "----------------------------------------\n";
+    
+    // Include last 20 errors max
+    $recent_errors = array_slice($errors, -20);
+    foreach ($recent_errors as $error) {
+        $message .= $error . "\n";
+    }
+    
+    // Send email
+    mail($to_email, $subject, $message);
+}
+?></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">JS Performance Monitor</Data></Cell>
+    <Cell><Data ss:Type="String">/**
+ * JavaScript Performance Monitor
+ * 
+ * Add to your theme's footer to track client-side performance
+ */
+ 
+// Add this to your theme's footer
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Only run on a small percentage of page views (5%)
+  if (Math.random() > 0.05) return;
+  
+  // Get performance timing data
+  setTimeout(function() {
+    if (window.performance && window.performance.timing) {
+      var timing = window.performance.timing;
+      
+      // Calculate timing metrics
+      var pageLoadTime = timing.loadEventEnd - timing.navigationStart;
+      var domReadyTime = timing.domComplete - timing.domLoading;
+      var renderTime = timing.domComplete - timing.domContentLoadedEventStart;
+      
+      // Get browser and page info
+      var pageUrl = window.location.href;
+      var userAgent = navigator.userAgent;
+      var screenSize = window.innerWidth + 'x' + window.innerHeight;
+      
+      // Prepare data to send
+      var perfData = {
+        url: pageUrl,
+        page_load_time: pageLoadTime,
+        dom_ready_time: domReadyTime,
+        render_time: renderTime,
+        user_agent: userAgent,
+        screen_size: screenSize,
+        timestamp: new Date().toISOString()
+      };
+      
+      // Send to your endpoint (create this PHP file)
+      fetch('/performance-logger.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(perfData)
+      }).catch(function(error) {
+        console.error('Performance logging failed:', error);
+      });
+    }
+  }, 0);
+});
+</script></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">PHP Performance Tracking</Data></Cell>
+    <Cell><Data ss:Type="String"><?php
+/**
+ * PHP Performance Tracking
+ *
+ * Add to wp-config.php (before require_once ABSPATH . 'wp-settings.php')
+ */
+
+// Start time tracking
+define('WP_START_TIME', microtime(true));
+
+// At the end of your theme's footer.php, add:
+if (defined('WP_START_TIME') && current_user_can('administrator')) {
+    $load_time = round((microtime(true) - WP_START_TIME) * 1000);
+    $memory_usage = round(memory_get_peak_usage() / 1024 / 1024, 2);
+    $query_count = get_num_queries();
+    
+    echo '<!-- Page generated in ' . $load_time . 'ms | Memory: ' . $memory_usage . 'MB | DB Queries: ' . $query_count . ' -->';
+}
+?></Data></Cell>
+   </Row>
+   
+   <Row>
+    <Cell><Data ss:Type="String">Server Resource Monitor</Data></Cell>
+    <Cell><Data ss:Type="String"><?php
+/**
+ * Server Resource Monitor
+ * 
+ * Save as server-monitor.php and run via cron
+ */
+
+// Configuration
+$to_email = 'your-email@example.com';
+$site_name = 'Your WordPress Site';
+
+// Check CPU load
+$load = sys_getloadavg();
+$cpu_usage = $load[0]; // 1-minute average
+
+// Check memory usage
+$free = shell_exec('free -m');
+$memory = preg_match('/^Mem:\s+(\d+)\s+(\d+)\s+(\d+)/m', $free, $matches);
+$total_memory = $matches[1];
+$used_memory = $matches[2];
+$memory_percent = round(($used_memory / $total_memory) * 100);
+
+// Check disk usage
+$disk_usage = disk_free_space('/') / disk_total_space('/') * 100;
+$disk_free_percent = round(100 - $disk_usage);
+
+// Alert thresholds
+$cpu_threshold = 80; // CPU load 
+$memory_threshold = 85; // Memory usage percentage
+$disk_threshold = 90; // Disk usage percentage
+
+// Check if any threshold is exceeded
+$alert_triggered = false;
+$alert_message = "Server Resource Alert\n\n";
+$alert_message .= "Site: $site_name\n";
+$alert_message .= "Time: " . date('Y-m-d H:i:s') . "\n\n";
+
+if ($cpu_usage > $cpu_threshold) {
+    $alert_triggered = true;
+    $alert_message .= "CPU ALERT: Load average is $cpu_usage (threshold: $cpu_threshold)\n";
+}
+
+if ($memory_percent > $memory_threshold) {
+    $alert_triggered = true;
+    $alert_message .= "MEMORY ALERT: Memory usage is $memory_percent% (threshold: $memory_threshold%)\n";
+    $alert_message .= "Used: $used_memory MB / Total: $total_memory MB\n";
+}
+
+if ($disk_free_percent > $disk_threshold) {
+    $alert_triggered = true;
+    $alert_message .= "DISK ALERT: Disk usage is $disk_free_percent% (threshold: $disk_threshold%)\n";
+}
+
+// Send alert if needed
+if ($alert_triggered) {
+    $subject = "ALERT: $site_name - Server Resource Warning";
+    mail($to_email, $subject, $alert_message);
+}
+?></Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ 
+ <Worksheet ss:Name="Instructions">
+  <Table>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">WORDPRESS & ELEMENTOR WEBSITE HEALTH COCKPIT - INSTRUCTIONS
